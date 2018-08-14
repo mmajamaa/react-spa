@@ -1,0 +1,87 @@
+body {
+  background-color: #96858F;
+  padding: 20px;
+  margin: 0;
+}
+
+.about p {
+  margin: 0;
+}
+
+.contact p {
+  margin: 0;
+}
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #D5D5D5;
+  padding: 0;
+}
+
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+.content {
+  background-color: #D5D5D5;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  background-color: #6D7993;
+}
+
+.link:hover {
+  background-color: #6D7993;
+  cursor: default;
+}
+
+.flag {
+  height: 13.2px;
+  width: 21.6px;
+  border: 1px solid #96858F;
+}
+
+.flag-li {
+  float: right;
+  padding: 20px;
+}
+
+.flag-li:hover {
+  background-color: #6D7993;
+}
+
+.mikko {
+  width: 25%;
+  height: 50%;
+  border: .1px solid #96858F;
+}
+
+.aboutme_projects {
+  float: left;
+  padding-top: 5px;
+}
+
+.about_list {
+  padding-bottom: 5px;
+}
