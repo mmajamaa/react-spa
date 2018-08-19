@@ -12,6 +12,7 @@ import Home from "./Home";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import About from "./About";
+import ResponsiveMenu from 'react-responsive-navbar';
 
 class Main extends Component {
   constructor(props) {
@@ -106,21 +107,30 @@ class Main extends Component {
     return (
       <HashRouter>
       <div>
-        <ul className="header">
-            <li><NavLink exact to="/" className="link">{this.getContent(this.state.lang, 'main')}</NavLink></li>
-            <li><NavLink to="/aboutme" className="link">{this.getContent(this.state.lang, 'aboutme')}</NavLink></li>
-            <li><NavLink to="/projects" className="link">{this.getContent(this.state.lang, 'projects')}</NavLink></li>
-            <li><NavLink to="/contact" className="link">{this.getContent(this.state.lang, 'contact')}</NavLink></li>
-            <li className="flag-li" onClick={() => {if (this.state.lang !== 'ru'){this.setState({lang:'ru'})}}}>
-                <img src={ru} alt="RU" className="flag"/>
-            </li>
-            <li className="flag-li" onClick={() => {if (this.state.lang !== 'fi'){this.setState({lang:'fi'})}}}>
-                  <img src={fi} alt="FI" className="flag"/>
-            </li>
-            <li className="flag-li" onClick={() => {if (this.state.lang !== 'en'){this.setState({lang:'en'})}}}>
-                <img src={gb} alt="EN" className="flag"/>
-            </li>
-          </ul>
+        <ResponsiveMenu
+                menuOpenButton={<div />}
+                menuCloseButton={<div />}
+                changeMenuOn="500px"
+                largeMenuClassName="large-menu-classname"
+                smallMenuClassName="small-menu-classname"
+                menu={
+                <ul className="header">
+                    <li><NavLink exact to="/" className="link">{this.getContent(this.state.lang, 'main')}</NavLink></li>
+                    <li><NavLink to="/aboutme" className="link">{this.getContent(this.state.lang, 'aboutme')}</NavLink></li>
+                    <li><NavLink to="/projects" className="link">{this.getContent(this.state.lang, 'projects')}</NavLink></li>
+                    <li><NavLink to="/contact" className="link">{this.getContent(this.state.lang, 'contact')}</NavLink></li>
+                    <li className="flag-li" onClick={() => {if (this.state.lang !== 'ru'){this.setState({lang:'ru'})}}}>
+                        <img src={ru} alt="RU" className="flag"/>
+                    </li>
+                    <li className="flag-li" onClick={() => {if (this.state.lang !== 'fi'){this.setState({lang:'fi'})}}}>
+                          <img src={fi} alt="FI" className="flag"/>
+                    </li>
+                    <li className="flag-li" onClick={() => {if (this.state.lang !== 'en'){this.setState({lang:'en'})}}}>
+                        <img src={gb} alt="EN" className="flag"/>
+                    </li>
+                  </ul>
+                }
+              />
           <div className="content">
             <Route exact path="/" render={()=><Home lang={this.state.lang} getContent={this.getContent}/>}/>
             <Route path="/aboutme" render={()=><About lang={this.state.lang} getContent={this.getContent}/>}/>
