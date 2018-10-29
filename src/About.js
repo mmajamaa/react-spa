@@ -13,25 +13,28 @@ class About extends Component {
     return (
       <HashRouter>
         <div className="about">
-          <h2>{this.props.getContent(this.props.lang, 'aboutme')}</h2>
-          <img src={cwhGz52w} className="mikko" alt="IMG"/>
-          <p>{this.props.getContent(this.props.lang, 'aboutme_intro')}</p><br/>
-          <p className="about_list_header">{this.props.getContent(this.props.lang, 'aboutme_p_langs')}</p>
+          <h2>{this.props.getContent['aboutme']}</h2>
+          <div className="img-wrapper">
+            <img src={cwhGz52w} className="mikko" style={this.props.width < 689 ? {width: '100%'} : {}}  alt="IMGmikko"/>
+          </div>
+          <p>{this.props.getContent['aboutme_intro']}</p><br/>
+          <p className="about_list_header">{this.props.getContent['aboutme_p_langs']}</p>
           <ul>
             <li>Python</li>
             <li>C</li>
             <li>Java</li>
-            <li>JavaScript (React)</li>
-            <li>HTML, css, SQL</li>
+            <li>JavaScript (React, Node.js)</li>
+            <li>HTML, css, SQL (SQLite, Oracle)</li>
+            <li>etc...</li>
           </ul>
-          <p className="aboutme_projects">{this.props.getContent(this.props.lang, 'aboutme_projects')}</p>
-          <NavLink to="/projects" className="aboutme_projects">{this.props.getContent(this.props.lang, 'projects')}</NavLink><br/><br/>
-          <p className="about_list_header">{this.props.getContent(this.props.lang, 'aboutme_langs')}</p>
+          <p className="aboutme_projects">{this.props.getContent['aboutme_projects']}</p>
+          <NavLink to="/projects" className="aboutme_projects">{this.props.getContent['projects']}</NavLink><br/><br/>
+          <p className="about_list_header">{this.props.getContent['aboutme_langs']}</p>
           <ul>
-            <li>{this.props.getContent(this.props.lang, 'aboutme_fi')}</li>
-            <li>{this.props.getContent(this.props.lang, 'aboutme_en')}</li>
-            <li>{this.props.getContent(this.props.lang, 'aboutme_swe')}</li>
-            <li>{this.props.getContent(this.props.lang, 'aboutme_ru')}</li>
+            <li>{this.props.getContent['aboutme_fi']}</li>
+            <li>{this.props.getContent['aboutme_en']}</li>
+            <li>{this.props.getContent['aboutme_swe']}</li>
+            <li>{this.props.getContent['aboutme_ru']}</li>
           </ul>
         </div>
       </HashRouter>

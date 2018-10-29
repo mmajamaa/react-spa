@@ -1,87 +1,135 @@
 body {
-  background-color: #96858F;
-  padding: 20px;
-  margin: 0;
+  background-color: #eaeaea;
+  padding: 0;
+  color: #000
 }
 
-.about p {
-  margin: 0;
+.about p, .contact p, body {
+  margin: 0
 }
 
-.contact p {
-  margin: 0;
+h1, h2, li, p, ul {
+  font-family: Arial;
 }
 
-h1, h2, p, ul, li {
-  font-family: sans-serif;
+
+h2 {
+  font-size: 48px
 }
 
 h3 {
-  font-family: sans-serif;
-  font-size: 20px;
+  font-family: Arial;
+  font-size: 20px
 }
+
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0;
-}
-ul.header {
-  background-color: #D5D5D5;
-  padding: 0;
-}
-
-ul.header li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
+  margin: 0
 }
 
 .content {
-  background-color: #D5D5D5;
+  clear: both;
+  background-color: #e2e0e0;
   padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  word-wrap: break-word
 }
 
-.active {
-  background-color: #6D7993;
+.content h2 {
+  padding: 0;
+  margin: 0
 }
 
 .link:hover {
-  background-color: #6D7993;
+  background-color: #6d7993;
   cursor: default;
+  -o-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25s
 }
 
 .flag {
   height: 13.2px;
   width: 21.6px;
-  border: 1px solid #96858F;
+  border: 1px solid #96858f
+}
+
+.menuButton {
+  float: right;
+  margin: 10px;
+  height: 45px;
+  width: 45px
 }
 
 .flag-li {
-  float: right;
-  padding: 20px;
+  padding: 20.5px
 }
 
 .flag-li:hover {
-  background-color: #6D7993;
+  background-color: #6d7993;
+  -o-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25s
 }
 
 .mikko {
-  width: 25%;
+  width: 30%;
   height: 50%;
-  border: .1px solid #96858F;
+  border: .1px solid #96858f;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .aboutme_projects {
   float: left;
-  padding-top: 5px;
+  padding-top: 5px
 }
 
 .about_list {
-  padding-bottom: 5px;
+  padding-bottom: 5px
 }
+
+.small-menu-classname ul.header li, ul.header {
+  display: block
+}
+
+ul.header {
+  clear: both;
+  vertical-align: top;
+  background-color: #d5d5d5;
+  padding: 0;
+  width: 100%
+}
+
+ul.header li a {
+  color: #6d7993;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block
+}
+
+.small-menu-classname ul.header li:hover {
+  color: #fff;
+  background-color: #6d7993;
+  -o-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25s
+}
+
+ul.header li a:hover {
+  color: #fff
+}
+
+.small-menu-classname li.flag-li {
+  float: right
+}
+
+.small-menu-classname img#mikidi {
+  float: left
+}
+
+
+/*# sourceMappingURL=main.96b886c5.css.map*/
