@@ -28,7 +28,7 @@ class Main extends Component {
   }
 
   componentWillMount() {
-    fetch('/languages')
+    fetch('/api/languages')
     .then(res => res.json())
     .then(languages => this.setState({ languages }));
 }
@@ -38,13 +38,12 @@ class Main extends Component {
     }
 
     fetchLanguages() {
-      fetch('/languages')
+      fetch('/api/languages')
       .then(res => res.json())
       .then(languages => this.setState({ languages }));
     }
 
   updateDimensions() {
-      console.log(this.state.languages[this.state.lang]['main'])
       this.setState({
         width: window.innerWidth,
       });

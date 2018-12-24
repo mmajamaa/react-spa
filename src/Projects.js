@@ -14,15 +14,14 @@ class Projects extends Component {
   render() {
     return (
       <div>
-      <p>{this.props.getContent['gh']} <a href="https://github.com/mikkomajamaa/" target="_blank" rel="noopener noreferrer"> gitHub</a></p>
+      <p>{this.props.getContent['gh']} <a href="https://github.com/mikkomajamaa/" target="_blank" rel="noopener noreferrer"> gitHub</a>.</p>
         <h2>{this.props.getContent['projects']}</h2><br/>
 
         <div id="this_site">
-            <h3>{this.props.getContent['this_site_project']}{" (JavaScript React, Node.js)"}</h3>
+            <h3>{this.props.getContent['this_site_project']}{" (React.js, Node.js)"}</h3>
             <p>
               {this.props.getContent['this_site']}
-              <a href="https://github.com/mikkomajamaa/react-spa" target="_blank" rel="noopener noreferrer">frontend</a> &nbsp;
-              <a href="https://github.com/mikkomajamaa/express-backend" target="_blank" rel="noopener noreferrer">backend</a>
+              <a href="https://github.com/mikkomajamaa/my-site" target="_blank" rel="noopener noreferrer">gitHub</a>.
             </p>
         </div>
         <div id="caloriesCounter">

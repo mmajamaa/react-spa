@@ -23,8 +23,8 @@ class About extends Component {
             <li>Python</li>
             <li>C</li>
             <li>Java</li>
-            <li>JavaScript (React, Node.js)</li>
-            <li>HTML, css, SQL (SQLite, Oracle)</li>
+            <li>JavaScript (React.js, Vue.js, Node.js...)</li>
+            <li>HTML5, css, SQL (SQLite, Oracle), MongoDB, Docker</li>
             <li>etc...</li>
           </ul>
           <p className="aboutme_projects">{this.props.getContent['aboutme_projects']}</p>
