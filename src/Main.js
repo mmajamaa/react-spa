@@ -3,6 +3,8 @@ import fi from './fi.png';
 import gb from './gb.png';
 import ru from './ru.png';
 
+import languages from './languages.json'
+
 import {
   Route,
   NavLink,
@@ -28,26 +30,22 @@ class Main extends Component {
   }
 
   componentWillMount() {
-    fetch('/api/languages')
-    .then(res => res.json())
-    .then(languages => this.setState({ languages }));
-}
+    this.setState({ languages });
+  }
 
   componentDidMount() {
-      window.addEventListener("resize", this.updateDimensions);
-    }
+    window.addEventListener("resize", this.updateDimensions);
+  }
 
-    fetchLanguages() {
-      fetch('/api/languages')
-      .then(res => res.json())
-      .then(languages => this.setState({ languages }));
-    }
+  fetchLanguages() {
+    this.setState({ languages });
+  }
 
   updateDimensions() {
-      this.setState({
-        width: window.innerWidth,
-      });
-    }
+    this.setState({
+      width: window.innerWidth,
+    });
+  }
 
   render() {
     if (this.state.languages.length === 0) {
@@ -57,44 +55,44 @@ class Main extends Component {
       if (this.state.lang === language) {
         return
       }
-      this.setState({lang: language})
+      this.setState({ lang: language })
     }
 
     return (
       <HashRouter>
         <div>
-        <ResponsiveMenu
-        menuOpenButton={<img className="menuButton" src={FaBars} alt="menuOpenButton"/>}
-        menuCloseButton={<img className="menuButton" src={FaTimes} alt="menuCloseButton"/>}
-        changeMenuOn="689px"
-        largeMenuClassName="large-menu-classname"
-        smallMenuClassName="small-menu-classname"
-        menu={
-          <ul className="header">
-            <li><NavLink exact to="/" className="link">{this.state.languages[this.state.lang]['main']}</NavLink></li>
-            <li><NavLink to="/aboutme" className="link">{this.state.languages[this.state.lang]['aboutme']}</NavLink></li>
-            <li><NavLink to="/projects" className="link">{this.state.languages[this.state.lang]['projects']}</NavLink></li>
-            <li><NavLink to="/contact" className="link">{this.state.languages[this.state.lang]['contact']}</NavLink></li>
-              <li className="flag-li" onClick={setlang('en')}>
-                  <img src={gb} alt="EN" className="flag"/>
-              </li>
-              <li className="flag-li" onClick={setlang('fi')}>
-                    <img src={fi} alt="FI" className="flag"/>
-              </li>
-              <li className="flag-li" onClick={setlang('ru')}>
-                  <img src={ru} alt="RU" className="flag"/>
-            </li>
-          </ul>
-        }
-      />
-      <div>
-          <div className="content">
-            <Route exact path="/" render={()=><Home getContent={this.state.languages[this.state.lang]}/>}/>
-            <Route path="/aboutme" render={()=><About width={window.innerWidth} getContent={this.state.languages[this.state.lang]}/>}/>
-            <Route path="/projects" render={()=><Projects getContent={this.state.languages[this.state.lang]}/>}/>
-            <Route path="/contact" render={()=><Contact getContent={this.state.languages[this.state.lang]}/>}/>
+          <ResponsiveMenu
+            menuOpenButton={<img className="menuButton" src={FaBars} alt="menuOpenButton" />}
+            menuCloseButton={<img className="menuButton" src={FaTimes} alt="menuCloseButton" />}
+            changeMenuOn="689px"
+            largeMenuClassName="large-menu-classname"
+            smallMenuClassName="small-menu-classname"
+            menu={
+              <ul className="header">
+                <li><NavLink exact to="/" className="link">{this.state.languages[this.state.lang]['main']}</NavLink></li>
+                <li><NavLink to="/aboutme" className="link">{this.state.languages[this.state.lang]['aboutme']}</NavLink></li>
+                <li><NavLink to="/projects" className="link">{this.state.languages[this.state.lang]['projects']}</NavLink></li>
+                <li><NavLink to="/contact" className="link">{this.state.languages[this.state.lang]['contact']}</NavLink></li>
+                <li className="flag-li" onClick={setlang('en')}>
+                  <img src={gb} alt="EN" className="flag" />
+                </li>
+                <li className="flag-li" onClick={setlang('fi')}>
+                  <img src={fi} alt="FI" className="flag" />
+                </li>
+                <li className="flag-li" onClick={setlang('ru')}>
+                  <img src={ru} alt="RU" className="flag" />
+                </li>
+              </ul>
+            }
+          />
+          <div>
+            <div className="content">
+              <Route exact path="/" render={() => <Home getContent={this.state.languages[this.state.lang]} />} />
+              <Route path="/aboutme" render={() => <About width={window.innerWidth} getContent={this.state.languages[this.state.lang]} />} />
+              <Route path="/projects" render={() => <Projects getContent={this.state.languages[this.state.lang]} />} />
+              <Route path="/contact" render={() => <Contact getContent={this.state.languages[this.state.lang]} />} />
+            </div>
           </div>
-        </div>
         </div>
       </HashRouter>
     );

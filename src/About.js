@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import cwhGz52w from "./cwhGz52w.jpeg";
 
 import {
-  Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Projects from "./Projects";
 
 class About extends Component {
   render() {
@@ -15,9 +13,9 @@ class About extends Component {
         <div className="about">
           <h2>{this.props.getContent['aboutme']}</h2>
           <div className="img-wrapper">
-            <img src={cwhGz52w} className="mikko" style={this.props.width < 689 ? {width: '100%'} : {}}  alt="IMGmikko"/>
+            <img src={cwhGz52w} className="mikko" style={this.props.width < 689 ? { width: '100%' } : {}} alt="IMGmikko" />
           </div>
-          <p>{this.props.getContent['aboutme_intro']}</p><br/>
+          <p>{this.props.getContent['aboutme_intro']}</p><br />
           <p className="about_list_header">{this.props.getContent['aboutme_p_langs']}</p>
           <ul>
             <li>Python</li>
@@ -28,7 +26,7 @@ class About extends Component {
             <li>etc...</li>
           </ul>
           <p className="aboutme_projects">{this.props.getContent['aboutme_projects']}</p>
-          <NavLink to="/projects" className="aboutme_projects">{this.props.getContent['projects']}</NavLink><br/><br/>
+          <NavLink to="/projects" className="aboutme_projects">{this.props.getContent['projects']}</NavLink><br /><br />
           <p className="about_list_header">{this.props.getContent['aboutme_langs']}</p>
           <ul>
             <li>{this.props.getContent['aboutme_fi']}</li>
