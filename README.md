@@ -1,2 +1,2 @@
 # react-spa
-This is the frontend repo of my introduction page www.mikkomajamaa.fi developed with React.js.
+This is the repo of my introduction page www.mmajamaa.fi developed with React.js.
