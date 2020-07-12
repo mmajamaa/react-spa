@@ -1,14 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
-  Route,
-  HashRouter
+  Switch, Route, BrowserRouter
 } from "react-router-dom";
 
-import Navbar from "./components/Navbar"
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import About from "./components/About";
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import About from './components/About';
+import Projects from './components/Projects'
+import Contact from './components/Contact';
 import languages from './data/languages.json'
 
 class Main extends Component {
@@ -53,19 +52,21 @@ class Main extends Component {
     }
 
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <Navbar getContent={this.state.languages[this.state.lang]} setlang={this.setlang} />
           <div>
             <div className="content">
-              <Route exact path="/" render={() => <Home getContent={this.state.languages[this.state.lang]} />} />
-              <Route path="/aboutme" render={() => <About width={window.innerWidth} getContent={this.state.languages[this.state.lang]} />} />
-              <Route path="/projects" render={() => <Projects getContent={this.state.languages[this.state.lang]} />} />
-              <Route path="/contact" render={() => <Contact getContent={this.state.languages[this.state.lang]} />} />
+              <Switch>
+                <Route exact path="/" render={() => <Home getContent={this.state.languages[this.state.lang]} />} />
+                <Route path="/aboutme" render={() => <About width={window.innerWidth} getContent={this.state.languages[this.state.lang]} />} />
+                <Route path="/projects" render={() => <Projects getContent={this.state.languages[this.state.lang]} />} />
+                <Route path="/contact" render={() => <Contact getContent={this.state.languages[this.state.lang]} />} />
+              </Switch>
             </div>
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

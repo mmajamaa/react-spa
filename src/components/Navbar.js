@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  NavLink
+  Link
 } from "react-router-dom";
 
 import ResponsiveMenu from 'react-responsive-navbar';
@@ -23,10 +23,10 @@ class Navbar extends Component {
         smallMenuClassName="small-menu-classname"
         menu={
           <ul className="header">
-            <li><NavLink exact to="/" className="link">{this.props.getContent['main']}</NavLink></li>
-            <li><NavLink to="/aboutme" className="link">{this.props.getContent['aboutme']}</NavLink></li>
-            <li><NavLink to="/projects" className="link">{this.props.getContent['projects']}</NavLink></li>
-            <li><NavLink to="/contact" className="link">{this.props.getContent['contact']}</NavLink></li>
+            <li><Link to="/" className="link">{this.props.getContent['main']}</Link></li>
+            <li><Link to="/aboutme" className="link">{this.props.getContent['aboutme']}</Link></li>
+            <li><Link to="/projects" className="link">{this.props.getContent['projects']}</Link></li>
+            <li><Link to="/contact" className="link">{this.props.getContent['contact']}</Link></li>
             <li className="flag-li" onClick={this.props.setlang('en')}>
               <img src={gb} alt="EN" className="flag" />
             </li>
