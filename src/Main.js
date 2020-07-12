@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import fi from './fi.png';
-import gb from './gb.png';
-import ru from './ru.png';
+import fi from './assets/fi.png';
+import gb from './assets/gb.png';
+import ru from './assets/ru.png';
 
-import languages from './languages.json'
+import languages from './data/languages.json'
 
 import {
   Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Home from "./Home";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import About from "./About";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import About from "./components/About";
 import ResponsiveMenu from 'react-responsive-navbar';
-import FaBars from './bars-solid.svg';
-import FaTimes from './times-solid.svg';
+import FaBars from './assets/bars-solid.svg';
+import FaTimes from './assets/times-solid.svg';
 
 class Main extends Component {
   constructor(props) {

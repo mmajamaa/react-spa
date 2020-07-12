@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import mikko_2019 from "./mikko_2019.jpg";
+import mikko_2019 from "../assets/mikko_2019.jpg";
 
 import {
   NavLink,
