@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import cwhGz52w from "./cwhGz52w.jpeg";
+import mikko_2019 from "./mikko_2019.jpg";
 
 import {
   NavLink,
@@ -13,7 +13,7 @@ class About extends Component {
         <div className="about">
           <h2>{this.props.getContent['aboutme']}</h2>
           <div className="img-wrapper">
-            <img src={cwhGz52w} className="mikko" style={this.props.width < 689 ? { width: '100%' } : {}} alt="IMGmikko" />
+            <img src={mikko_2019} className="mikko" style={this.props.width < 689 ? { width: '100%' } : {}} alt="IMGmikko" />
           </div>
           <p>{this.props.getContent['aboutme_intro']}</p><br />
           <p className="about_list_header">{this.props.getContent['aboutme_p_langs']}</p>
