@@ -15,17 +15,20 @@ class About extends Component {
           <div className="img-wrapper">
             <img src={mikko_2019} className="mikko" style={this.props.width < 689 ? { width: '100%' } : {}} alt="IMGmikko" />
           </div>
-          <p>{this.props.getContent['aboutme_intro']}</p><br />
+          <p>{this.props.getContent['aboutme_intro']} <a href="https://lutpub.lut.fi/handle/10024/160977" target="_blank" rel="noopener noreferrer">{this.props.getContent['here']}</a>.</p><br />
           <p className="about_list_header">{this.props.getContent['aboutme_p_langs']}</p>
           <ul>
             <li>Python</li>
             <li>C</li>
+            <li>CUDA</li>
             <li>Java</li>
-            <li>JavaScript (React.js, Vue.js, Node.js...)</li>
+            <li>Ruby</li>
+            <li>JavaScript (Angular, React.js, Vue.js, Node.js, Express.js...)</li>
             <li>HTML5, css, SQL (SQLite, Oracle), MongoDB, Docker</li>
+            <li>MATLAB, R</li>
             <li>etc...</li>
           </ul>
-          <p className="aboutme_projects">{this.props.getContent['aboutme_projects']}</p>
+          <p className="aboutme_projects">{this.props.getContent['aboutme_projects']}&nbsp;</p>
           <NavLink to="/projects" className="aboutme_projects">{this.props.getContent['projects']}</NavLink><br /><br />
           <p className="about_list_header">{this.props.getContent['aboutme_langs']}</p>
           <ul>
