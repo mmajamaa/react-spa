@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import mikko_2019 from "../assets/mikko_2019.jpg";
-
 import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+
+import mikko_2019 from "../assets/mikko_2019.jpg";
 
 class About extends Component {
   render() {
