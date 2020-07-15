@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import { Helmet } from 'react-helmet'
 
 class Projects extends Component {
   constructor(props) {
@@ -14,6 +15,10 @@ class Projects extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Mikko Majamaa - {this.props.getContent['projects']}</title>
+          <meta name="description" content="Here's some of my projects. More can be found at https://github.com/mmajamaa/." />
+        </Helmet>
         <p>{this.props.getContent['gh']} <a href="https://github.com/mmajamaa/" target="_blank" rel="noopener noreferrer"> GitHub</a></p>
         <h2>{this.props.getContent['projects']}</h2><br />
 

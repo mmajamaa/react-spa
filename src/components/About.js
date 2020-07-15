@@ -3,12 +3,18 @@ import {
   NavLink
 } from "react-router-dom";
 
+import { Helmet } from 'react-helmet'
+
 import mikko_2019 from "../assets/mikko_2019.jpg";
 
 class About extends Component {
   render() {
     return (
       <div className="about">
+        <Helmet>
+          <title>Mikko Majamaa - {this.props.getContent['aboutme']}</title>
+          <meta name="description" content="Hey, my name is Mikko Majamaa. Computational engineering is what I do!" />
+        </Helmet>
         <h2>{this.props.getContent['aboutme']}</h2>
         <div className="img-wrapper">
           <img src={mikko_2019} className="mikko" style={this.props.width < 689 ? { width: '100%' } : {}} alt="IMGmikko" />
