@@ -8,6 +8,7 @@ import Home from './components/Home'
 import About from './components/About';
 import Projects from './components/Projects'
 import Contact from './components/Contact';
+import PageNotFound from './components/404'
 import languages from './data/languages.json'
 
 class Main extends Component {
@@ -62,6 +63,7 @@ class Main extends Component {
                 <Route path="/aboutme" render={() => <About width={window.innerWidth} getContent={this.state.languages[this.state.lang]} />} />
                 <Route path="/projects" render={() => <Projects getContent={this.state.languages[this.state.lang]} />} />
                 <Route path="/contact" render={() => <Contact getContent={this.state.languages[this.state.lang]} />} />
+                <Route render={() => <PageNotFound />} />
               </Switch>
             </div>
           </div>
