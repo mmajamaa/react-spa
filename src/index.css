@@ -25,7 +25,8 @@ h3 {
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0
+  margin: 0;
+  cursor: pointer;
 }
 
 .content {
@@ -44,10 +45,10 @@ ul.header li {
 
 .link:hover {
   background-color: #6d7993;
-  cursor: default;
   -o-transition: .25s;
   -webkit-transition: .25s;
-  transition: .25s
+  transition: .25s;
+  cursor: pointer;
 }
 
 .flag {
@@ -60,7 +61,8 @@ ul.header li {
   float: right;
   margin: 10px;
   height: 45px;
-  width: 45px
+  width: 45px;
+  cursor: pointer;
 }
 
 .flag-li {
@@ -71,7 +73,8 @@ ul.header li {
   background-color: #6d7993;
   -o-transition: .25s;
   -webkit-transition: .25s;
-  transition: .25s
+  transition: .25s;
+  cursor: pointer;
 }
 
 .mikko {
@@ -131,5 +134,7 @@ ul.header li a:hover {
   float: left
 }
 
-
-/*# sourceMappingURL=main.96b886c5.css.map*/
+.small-menu-classname a {
+  width: 100%;
+  padding-left: 0px !important;
+}
