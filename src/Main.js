@@ -63,7 +63,7 @@ class Main extends Component {
                 <Route path="/aboutme" render={() => <About width={window.innerWidth} getContent={this.state.languages[this.state.lang]} />} />
                 <Route path="/projects" render={() => <Projects getContent={this.state.languages[this.state.lang]} />} />
                 <Route path="/contact" render={() => <Contact getContent={this.state.languages[this.state.lang]} />} />
-                <Route render={() => <PageNotFound />} />
+                <Route path="/*" render={() => <PageNotFound />} />
               </Switch>
             </div>
           </div>
